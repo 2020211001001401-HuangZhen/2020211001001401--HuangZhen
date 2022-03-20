@@ -1,11 +1,16 @@
 package com.HuangZhen.week3.demo;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
 
+@WebServlet("/register")
 public class RegisterServlet extends HttpServlet {
+
+    Connection con=null;
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
