@@ -8,7 +8,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-@WebServlet("/life")
+@WebServlet(name= "/life")
 public class LifeCycleServlet extends HttpServlet {
 
 Connection con=null;

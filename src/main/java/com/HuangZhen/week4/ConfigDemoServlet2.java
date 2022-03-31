@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 
+
 @WebServlet(name = "ConfigDemoServlet2",urlPatterns = {"/config2"},
         initParams = {
                 @WebInitParam(name = "Name",value = "HuangZhen"),

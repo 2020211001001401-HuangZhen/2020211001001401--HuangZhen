@@ -21,7 +21,7 @@ import java.sql.SQLException;
 )*/
 
 
-@WebServlet(urlPatterns = {"/jdbc"},loadOnStartup=1)
+//@WebServlet(urlPatterns = {"/jdbc"},loadOnStartup=1)
 public class JDBCDemoServlet extends HttpServlet {
     Connection con=null;
     @Override

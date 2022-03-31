@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 
-@WebServlet("/register")
+@WebServlet(name = "RegisterServlet",urlPatterns = {"/register"})
 public class RegisterServlet extends HttpServlet {
 
     Connection con=null;

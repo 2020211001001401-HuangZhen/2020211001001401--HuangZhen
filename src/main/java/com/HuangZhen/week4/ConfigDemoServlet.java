@@ -6,7 +6,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.sql.Connection;
 
-@WebServlet(name = "ConfigDemoServlet", value = "/ConfigDemoServlet")
+@WebServlet(name = "ConfigDemoServlet", value = "/config")
 public class ConfigDemoServlet extends HttpServlet {
     Connection con=null;
     @Override
