@@ -3,11 +3,9 @@
 
 
 
-
-
 <html>
 <head>
-    <title>New User Registration!</title>
+
     <style type="text/css">
         body{
             /*background-color:lightyellow;*/
@@ -50,7 +48,7 @@
             /*margin-top: 10px;*/
             height: 40px;
             width: 300px;
-           outline: none;/*去掉input选中后的黑色边框*/
+            outline: none;/*去掉input选中后的黑色边框*/
         }
         #man,#woman{
             /*margin-top: 0;*/
@@ -68,26 +66,31 @@
 
 <div class="all">
     <div style="display: flex;">
-        <h3>This is my register JSP page</h3>
+        <h2>User Update</h2>
     </div>
-<div class="box1">
-    <div class="content">
-           <text style="display: flex;margin-bottom: 20px;font-size: 13px">New User Registration!</text>
-     <form class="box" onsubmit="return check()" method="post" action="register">
-         <input type="text" placeholder="Username" id="Username" name="username" required/>
-         <input type="password" placeholder="Password" id="Password" name="password" required />
-         <input type="email" placeholder="Email" id="Email" name="email" required/>
-      <div>
-         <text>Gender</text>
-         <input id="man" type="radio" checked="checked" name="gender" value="male"/>Male
-         <input id="woman" type="radio" name="gender" value="female"/>female
-      </div>
-         <input type="text" id="Date" style="margin-top: 10px" placeholder="Date of Birth(yyyy-mm-dd)" name="birthDate" required/>
-         <input type="submit" value="Register" id="register" style="text-align: center;height: 40px;
+
+    <%
+        User u=(User) session.getAttribute("user");
+    %>
+
+    <div class="box1">
+        <div class="content">
+            <form class="box" onsubmit="return check()" method="post" action="updateUser">
+                <input type="hidden" name="id" value="<%=u.getID()%>"/>
+                <input type="text" placeholder="Username" id="Username" name="username" value="<%=u.getUsername()%>" required/>
+                <input type="password" placeholder="Password" id="Password" name="password" value="<%=u.getPassword()%>" required />
+                <input type="email" placeholder="Email" id="Email" name="email" value="<%=u.getEmail()%>" required/>
+                <div>
+                    <text>Gender</text>
+                    <input id="man" type="radio" checked="checked" name="gender" value="male" <%="male".equals(u.getGender())?"checked":""%>/>Male
+                    <input id="woman" type="radio" name="gender" value="female" <%="female".equals(u.getGender())?"checked":""%>/>female
+                </div>
+                <input type="text" id="Date" style="margin-top: 10px" placeholder="Date of Birth(yyyy-mm-dd)" name="birthDate" value="<%=u.getBirthdate()%>" required/>
+                <input type="submit" value="Save Changes"  style="text-align: center;height: 40px;
             width: 300px;" />
-     </form>
+            </form>
+        </div>
     </div>
-</div>
 </div>
 
 <%@include file="footer.jsp"%>
@@ -95,13 +98,13 @@
 <script>
     let birth = document.querySelectorAll("input")[5];
     let email = document.querySelectorAll("input")[2];
-    birth.onblur = function(){
-        let reg = /^\d{4}\-\d{2}\-\d{2}$/;
-        if(birth.value != '' && !reg.test(birth.value)){
-            alert("Error Birth Format");
-            console.log(`[error] Error Birth Format`)
-        }
-    };
+<%--    birth.onblur = function(){--%>
+<%--        let reg = /^\d{4}\-\d{2}\-\d{2}$/;--%>
+<%--        if(birth.value != '' && !reg.test(birth.value)){--%>
+<%--            alert("Error Birth Format");--%>
+<%--            console.log(`[error] Error Birth Format`)--%>
+<%--        }--%>
+<%--    };--%>
     email.onblur = function(){
         let reg =/^[0-9a-zA-Z_.-]+[@][0-9a-zA-Z_.-]+([.][a-zA-Z]+){1,2}$/;
         if(email.value != '' && !reg.test(email.value)){
@@ -123,8 +126,6 @@
 
     }
 </script>
-
-
 
 </body>
 </html>

@@ -6,11 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="2020211001001401HuangZhen-master" />
         <module name="2020211001001401HuangZhen" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="2020211001001401HuangZhen" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
