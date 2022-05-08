@@ -3,7 +3,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-
     <!--set 4 context param =name value -->
     <context-param>
         <param-name>driver</param-name>
@@ -19,7 +18,7 @@
     </context-param>
     <context-param>
         <param-name>password</param-name>
-        <param-value>admin123456789</param-value>
+        <param-value>123456789</param-value>
     </context-param>
 
 
@@ -56,7 +55,7 @@
         </init-param>
         <init-param>
             <param-name>password</param-name>
-            <param-value>admin123456789</param-value>
+            <param-value>123456789</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>-->
@@ -86,11 +85,11 @@
         <url-pattern>/hello</url-pattern><!--url must start with / -->
     </servlet-mapping>
     <!-- 这里的/hello就相当于是com.HuangZhen.week2.demo.HelloWorldServlet-->
-   <!-- <servlet-mapping>
-        <servlet-name>LifeCycleServlet</servlet-name>
-        <url-pattern>/life</url-pattern>
-        &lt;!&ndash; 这里的/life==LifeCycleServlet==com.HuangZhen.week3.demo.LifeCycleServlet&ndash;&gt;
-    </servlet-mapping>-->
+    <!-- <servlet-mapping>
+         <servlet-name>LifeCycleServlet</servlet-name>
+         <url-pattern>/life</url-pattern>
+         &lt;!&ndash; 这里的/life==LifeCycleServlet==com.HuangZhen.week3.demo.LifeCycleServlet&ndash;&gt;
+     </servlet-mapping>-->
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/register</url-pattern><!--write this url in action-->
@@ -107,7 +106,7 @@
     <listener>
         <listener-class>com.HuangZhen.week6.JDBCServletContextListener</listener-class>
     </listener>
-    
+
     <welcome-file-list>
         <welcome-file>home</welcome-file>
     </welcome-file-list>
