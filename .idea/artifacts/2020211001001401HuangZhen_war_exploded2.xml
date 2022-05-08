@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="2020211001001401HuangZhen:war exploded2">
+    <output-path>$PROJECT_DIR$/out/artifacts/2020211001001401HuangZhen_war_exploded2</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="2020211001001401HuangZhen" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.microsoft.sqlserver:mssql-jdbc:9.4.0.jre11" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="2020211001001401HuangZhen/web/Web" />
+    </root>
+  </artifact>
+</component>
