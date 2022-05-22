@@ -1,7 +1,7 @@
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.sql.DriverManager" %>
 <%@ page import="java.io.PrintWriter" %>
-<%@ page import="com.HuangZhen.model.User" %><%--
+<%@ page import="com.LeiHou.model.User" %><%--
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="header.jsp"%>
 <h1> User List</h1>
