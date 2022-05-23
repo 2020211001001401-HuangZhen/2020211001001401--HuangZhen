@@ -110,4 +110,13 @@
     <welcome-file-list>
         <welcome-file>home</welcome-file>
     </welcome-file-list>
+    <filter>
+        <filter-name>HuangZhenFilter</filter-name>
+        <filter-class>com.HuangZhen.lab2.HuangZhenFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>HuangZhenFilter</filter-name>
+        <url-pattern>/lab2/welcome.jsp</url-pattern>
+        <url-pattern>/lab2/validation.jsp</url-pattern>
+    </filter-mapping>
 </web-app>
