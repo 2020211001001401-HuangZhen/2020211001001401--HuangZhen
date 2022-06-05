@@ -2,12 +2,11 @@ package com.HuangZhen.week5.demo;
 
 import com.HuangZhen.dao.UserDao;
 import com.HuangZhen.model.User;
-import javax.servlet.ServletContext;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.*;
 
 @WebServlet(name = "LoginServlet", value = "/login")

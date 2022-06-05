@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<%@page import="com.HuangZhen.model.User" %>
+<%@page import="com.HuangZhen.lab2.model.User" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
